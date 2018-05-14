@@ -56,11 +56,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="10718_We love kriii.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="10718_We love kriii.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/10718_We love kriii.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+              <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="11718_그대로 출력하기.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/11718_그대로 출력하기.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -85,6 +94,7 @@
         <option value="$PROJECT_DIR$/7287_등록.py" />
         <option value="$PROJECT_DIR$/10172_개.py" />
         <option value="$PROJECT_DIR$/10718_We love kriii.py" />
+        <option value="$PROJECT_DIR$/11718_그대로 출력하기.py" />
       </list>
     </option>
   </component>
@@ -124,7 +134,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.10718_We love kriii">
+  <component name="RunManager" selected="Python.11718_그대로 출력하기">
     <configuration name="1000_A+B" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="baekjoon" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,14 +207,34 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="11718_그대로 출력하기" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="baekjoon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/11718_그대로 출력하기.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.1000_A+B" />
       <item itemvalue="Python.1001_A-B" />
       <item itemvalue="Python.10172_개" />
       <item itemvalue="Python.10718_We love kriii" />
+      <item itemvalue="Python.11718_그대로 출력하기" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.11718_그대로 출력하기" />
         <item itemvalue="Python.10718_We love kriii" />
         <item itemvalue="Python.10172_개" />
         <item itemvalue="Python.1001_A-B" />
@@ -290,7 +320,14 @@
     <entry file="file://$PROJECT_DIR$/10718_We love kriii.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11718_그대로 출력하기.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
