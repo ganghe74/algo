@@ -1,5 +1,7 @@
 #include <iostream>
 
 int main() {
-	cout << cin.eof() << endl;
+	char nums[100];
+	gets(nums);
+	printf("%s", nums);
 }
