@@ -1,7 +1,9 @@
-// array test
-
+// 10818 test
 #include <iostream>
 int main() {
-	char a[7][4] = { "SUN", "MON" ,"TUE", "WED", "THU", "FRI", "SAT" };
-	printf("%s", a[1]);
+	int temp;
+	for (int i=0;i<5;i++) {
+		scanf("%d", &temp);
+		printf("%d", temp);	
+	}
 }
