@@ -8,7 +8,5 @@ int main() {
 		total_day += day_list[i];
 	}
 	total_day += y - 1;
-	
-	printf("%d %d\n",total_day, total_day % 7);
 	printf("%s", a[total_day%7]);
 }
