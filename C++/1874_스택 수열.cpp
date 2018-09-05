@@ -1,30 +1,39 @@
 #include <iostream>
 #include <string>
+#include <stack>
+#include <vector>
 using namespace std;
-string solve() {
+int main() {
 	string answer = "";
-	int n, plus, max, now, before;
-	before = 0;
-	plus = 0;
-	max = 0;
+	stack<int> simul;
+	vector<int> sequence;
+	int x, n;
 	cin >> n;
-	for (int i=0;i<n;i++) {
-		cin >> now;
-		if (now > before) {
-			for (int j=0;j<now - max;j++) {
+	while (n--) {
+		cin >> x;
+		sequence.push_back(x);
+	}
+	n++;
+	for (int i=0;i<sequence.size();i++) {
+		if (sequence[i] > n) {
+			while (sequence[i] > n) {
+				++n;
+				simul.push(n);
 				answer += "+\n";
-				plus += 1;
-				if (plus > n) return "NO";
 			}
-			max = now;
-			answer += "-\n";
-		} else {
+			simul.pop();
 			answer += "-\n";
 		}
-		before = now;
+		else {
+			if (sequence[i] != simul.top()) {
+				answer = "NO";
+				break;
+			}
+			else {
+				simul.pop();
+				answer += "-\n";
+			}
+		}
 	}
-	return answer;
-}
-int main() {
-	cout << solve();
+	cout << answer;
 }
