@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int d[400] = {0};
+int d[100001] = {0};
 int solve(int n) {
 	if (n <= 3) return n;
 	if (d[n] > 0) return d[n];
@@ -15,5 +15,5 @@ int main() {
 	int N;
 	cin >> N;
 	cout << solve(N);
+	return 0;
 }
-
