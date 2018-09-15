@@ -1,3 +1,2 @@
-﻿# 백준푸는곳
-## 백준을 풉니다
-### 백준을 매일매일 풉니다
+﻿# Baekjoon Online Judge
+https://www.acmicpc.net
