@@ -1,17 +1,16 @@
-#include <iostream>
+#include <cstdio>
+#include <algorithm>
 #include <vector>
-#include <algorithm> 
 using namespace std;
 int main() {
-	int N, n;
-	cin >> N;
-	vector<int> x;
-	while (N--) {
-		cin >> n;
-		x.push_back(n);
+	int N;
+	scanf("%d", &N);
+	vector<int> A(N);
+	for (int i=0;i<N;++i) {
+		scanf("%d", &A[i]);
 	}
-	sort(x.begin(),x.end());
-	for (auto &n : x) {
-		cout << n << endl;
+	sort(A.begin(), A.end());
+	for (int i=0;i<N;++i) {
+		printf("%d\n", A[i]);
 	}
 }
