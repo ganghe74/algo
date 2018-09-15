@@ -1,3 +1,4 @@
+//
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -27,5 +28,33 @@ int main() {
 	sort(a.begin(), a.end());
 	for (int i=0;i<N;++i) {
 		cout << a[i].Name << endl;
+	}
+}
+
+
+// Using tuple 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <tuple>
+using namespace std;
+struct student {
+	int Korean, English, Math;
+	string Name;
+	bool operator < (const student &v) const {
+		return make_tuple(-Korean, English, -Math, Name) < make_tuple(-v.Korean, v.English, -v.Math, v.Name);
+	}
+};
+int main() {
+	int N;
+	cin >> N;
+	vector<student> a(N);
+	for (int i=0;i<N;++i) {
+		cin >> a[i].Name >> a[i].Korean >> a[i].English >> a[i].Math;
+	}
+	sort(a.begin(), a.end());
+	for (int i=0;i<N;++i) {
+		cout << a[i].Name << '\n';
 	}
 }
