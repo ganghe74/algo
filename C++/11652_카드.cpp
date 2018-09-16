@@ -1,3 +1,4 @@
+// Sort
 #include <cstdio>
 #include <algorithm>
 #include <vector>
@@ -20,6 +21,32 @@ int main() {
 		if (cnt > ans_cnt) {
 			answer = a[i-1];
 			ans_cnt = cnt;
+		}
+	}
+	printf("%lld", answer);
+}
+
+
+
+// Map
+#include <cstdio>
+#include <map>
+using namespace std;
+int main() {
+	int N;
+	scanf("%d", &N);
+	map<long long, int> a;
+	while(N--) {
+		long long x;
+		scanf("%lld", &x);
+		a[x] += 1;
+	}
+	long long answer;
+	int cnt = 0;
+	for (auto &p : a) {
+		if (p.second > cnt) {
+			cnt = p.second;
+			answer = p.first;
 		}
 	}
 	printf("%lld", answer);
