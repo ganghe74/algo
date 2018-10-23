@@ -1,20 +1,18 @@
 #include <cstdio>
 #include <queue>
 using namespace std;
+int N, M;
+int dx[4] = {0,0,1,-1};
+int dy[4] = {1,-1,0,0};
+int a[100][100];
+int d[100][100];
 int main() {
-    int N, M;
-    int a[100][100];
-    int d[100][100];
-    int dx[4] = {0,0,1,-1};
-    int dy[4] = {1,-1,0,0};
-
     scanf("%d %d", &N, &M);
     for (int i=0;i<N; i++) {
         for (int j=0;j<M; j++) {
             scanf("%1d", &a[i][j]);
         }
     }
-
     queue<pair<int,int>> q;
     q.push(make_pair(0,0));
     d[0][0] = 1;
