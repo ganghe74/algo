@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 int main() {
     bool prime[10001] = {1,1};
