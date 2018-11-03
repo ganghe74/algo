@@ -1,2 +1,0 @@
-# C++
-http://cplusplus.com
