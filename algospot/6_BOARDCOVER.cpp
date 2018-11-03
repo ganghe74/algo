@@ -62,13 +62,6 @@ int main() {
             board.push_back(a);
         }
 
-        for (vector<int> vec: board) {
-            for (int n : vec) {
-                cout << n;
-            }
-            cout << endl;
-        }
-
         printf("%d\n", cover(board));
 
         board.clear();
