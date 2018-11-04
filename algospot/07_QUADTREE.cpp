@@ -18,6 +18,6 @@ int main() {
         string in;
         cin >> in;
         string::iterator it = in.begin();
-        cout << reverse(it); << endl;
+        cout << reverse(it) << endl;
     }
 }
