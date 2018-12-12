@@ -1,17 +1,17 @@
-#include <iostream>
+#include <cstdio>
 using namespace std;
 int main() {
 	int N, temp;
-	cin >> N;
+	scanf("%d", &N);
 	int cnt[10001] = {0};
 	while (N--) {
-		cin >> temp;
+		scanf("%d", &temp);
 		cnt[temp] += 1;
 	}
 	for (int i=1;i<=10000;++i) {
 		if (cnt[i] > 0) {
 			while (cnt[i]--) {
-				cout << i << '\n';
+				printf("%d\n", i);
 			}
 		}
 	}
