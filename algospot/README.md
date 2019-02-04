@@ -1,7 +1,7 @@
 ﻿# ALGOSPOT
 https://algospot.com
 
-# Curriculum
+# Problems
 http://book.algospot.com/problems.html
 
 | 장 번호 | 문제 이름 | 링크 |
