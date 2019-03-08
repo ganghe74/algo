@@ -1,7 +1,9 @@
 #include <iostream>
 #include <utility>
 using namespace std;
+
 typedef int KeyType;
+
 struct Node {
     KeyType key;
     int priority, size;
@@ -16,6 +18,7 @@ struct Node {
         if (right) size += right->size;
     }
 };
+
 typedef pair<Node*,Node*> NodePair;
 
 NodePair split(Node* root, KeyType key) {
