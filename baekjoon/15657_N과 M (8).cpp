@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int N, M;
+int a[8], b[8];
+void go(int minIdx, int len) {
+    if (len == M) {
+        for (int i=0;i<M;++i) printf("%d ", b[i]);
+        puts("");
+        return;
+    }
+    for (int i=minIdx;i<N;++i) {
+        b[len] = a[i];
+        go(i, len+1);
+    }
+}
+int main() {
+    scanf("%d%d", &N, &M);
+    for (int i=0;i<N;++i) scanf("%d", &a[i]);
+    sort(a, a+N);
+    go(0, 0);
+}
