@@ -3,7 +3,6 @@ def check(s):
     for x in s:
         if x in ['(', ')', '[', ']']:
             gwalho += x
-    print(gwalho)
     stack = ''
     for x in gwalho:
         if x in ['(', '[']:
