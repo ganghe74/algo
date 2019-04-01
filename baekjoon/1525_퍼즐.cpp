@@ -23,7 +23,6 @@ int main() {
     dist[start] = 0;
     q.push(start);
     while (!q.empty()) {
-        printf("%d\n", q.front());
         int now_num = q.front();
         string now = to_string(now_num);
         q.pop();
