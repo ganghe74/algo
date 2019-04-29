@@ -1,4 +1,3 @@
-// HACKED CODE ! ! !
 #include <iostream>
 #define LEFT 0
 #define RIGHT 1
@@ -10,8 +9,6 @@ int n, now = 0;
 int judge(int l, int r) {
     if (a[l] <= now) return RIGHT;
     if (a[r] <= now) return LEFT;
-    if (a[l] == a[l+1]) return RIGHT;
-    if (a[r] == a[r-1]) return LEFT;
     if (a[l] == a[r]) {
         int cnt_l = 0, cnt_r = 0;
         while (a[l] < a[l+1] && l < n-1) {
