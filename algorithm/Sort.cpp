@@ -54,6 +54,18 @@ void heap_sort(int a[], int n) {
     }
 }
 
+void counting_sort(int a[], int n, int maximum) { // a[i] must be [0, maximum] integer
+    int cnt[maximum+1] = {0};
+    for (int i=0;i<n;++i) cnt[a[i]]++;
+    int idx = 0;
+    for (int i=0;i<=maximum;++i) {
+        while (cnt[i] > 0) {
+            a[idx++] = i;
+            cnt[i]--;
+        }
+    }
+}
+
 int main() {
     int n;
     cout << "Array Size > ";
@@ -62,7 +74,7 @@ int main() {
     int a[n];
     for (int i=0;i<n;++i) cin >> a[i];
 
-    merge_sort(a, 0, n);
+    counting_sort(a, n, 100);
 
     cout << "Sorted Array\n";
     for (int i=0;i<n;++i) cout << a[i] << " ";
