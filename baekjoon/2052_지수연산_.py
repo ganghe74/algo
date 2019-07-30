@@ -1,0 +1,1 @@
+print(('%.300f'%2**-int(input())).rstrip('0'))
