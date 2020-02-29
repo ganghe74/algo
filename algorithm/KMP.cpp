@@ -22,6 +22,8 @@ vector<int> getPartialMatch(const string& N) {
     return pi;
 }
 
+// i = begin + matched,
+// j = matched
 vector<int> getPartialMatch2(const string &N) {
     int m = N.size();
     vector<int> pi(m, 0);
