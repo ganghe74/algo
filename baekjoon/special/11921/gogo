@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo $1
+g++ $1 -o run
+if [[ $? == 1 ]]; then
+    echo Something wrong
+    exit 1
+fi
+{ time ./run < input.txt > output.txt ; } 2> time.txt
+cmp input.txt output.txt
+if [[ $? == 1 ]]; then
+    echo Something wrong
+    exit 1
+fi
+echo Good
+cat time.txt
+echo >> README
+echo $1 >> README
+sed -e '1d' -e 's/sys/sys /' -e 's/\t/    /' -e 's/^/    /' time.txt >> README

@@ -1,0 +1,92 @@
+ _____         _     ___    _____  
+|  ___|_ _ ___| |_  |_ _|  / / _ \ 
+| |_ / _` / __| __|  | |  / / | | |
+|  _| (_| \__ \ |_   | | / /| |_| |
+|_|  \__,_|___/\__| |___/_/  \___/ 
+
+Files
+main.cpp: for boj.kr/11921
+gen.py  : generate input.txt
+gogo    : compile, run, measure c++ code, and valid input.txt == output.txt.
+          if valid, append the results to the README.
+          if compile failed or not valid, output "Something wrong".
+others  : For time measurements, Read 10,000,000 integers, and Print inputs.
+
+Abbreviations
+    BS: Buffer Size
+    getc: get char
+    getu: get unsigned int
+    geti: get signed int
+
+Time Measurements
+mmap = syscall > fread > getchar > cin,cout(nosync,untie) > scanf,printf > cin,cout(nosync) > cin,cout
+
+01_cin,cout-endl.cpp
+    real    1m15.510s
+    user    0m25.165s
+    sys     0m50.196s
+
+02_cin,cout-newline.cpp
+    real    1m15.497s
+    user    0m25.110s
+    sys     0m50.240s
+
+03_cin,cout-nosync.cpp
+    real    1m7.691s
+    user    0m18.259s
+    sys     0m49.326s
+
+04_cin,cout-untie.cpp
+    real    0m2.825s
+    user    0m2.511s
+    sys     0m0.197s
+
+05_scanf,printf.cpp
+    real    0m3.200s
+    user    0m2.707s
+    sys     0m0.328s
+
+06_getchar.cpp
+    real    0m2.268s
+    user    0m1.888s
+    sys     0m0.263s
+
+07_fread.cpp
+    real    0m2.099s
+    user    0m1.705s
+    sys     0m0.240s
+
+08_mmap.cpp
+    real    0m1.976s
+    user    0m1.602s
+    sys     0m0.252s
+
+09_syscall.cpp
+    real    0m1.973s
+    user    0m1.579s
+    sys     0m0.281s
+
+07_fread.cpp
+    real    0m2.117s
+    user    0m1.638s
+    sys     0m0.305s
+
+Submissions
+boj.kr/11921 submissions
+
+Method      Result  Memory      Time
+syscall     AC      6080KB      44ms
+mmap        AC      490508KB    44ms
+fread       AC      2496KB      100ms
+getchar     TLE
+...         TLE
+
+Conclusion
+cin,cout is not bad choice. these are even faster than scanf,printf.
+If extreme optimization is needed, syscall can be best choice! (at linux/gcc)
+
+References
+https://www.acmicpc.net/blog/view/56
+https://www.acmicpc.net/blog/view/57
+https://panty.run/fastio/
+https://blog.naver.com/rla_xodbs/221160551845

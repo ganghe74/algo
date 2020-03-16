@@ -1,51 +1,19 @@
+// https://github.com/ganghe74/algorithm-training/tree/master/baekjoon/special/11921
 #include <iostream>
-using namespace std;
+#include <unistd.h>
+constexpr int IS=1<<22;
+char I[IS],*J=I;
 
-void fastscan(int &x) {
-    bool neg=false;
-    register int c;
-    x = 0;
-    c = getchar();
-    if(c == '-') {
-        neg = true;
-        c = getchar();
-    }
-    for(;(c>47 && c<58);c=getchar())
-        x = (x<<1) + (x<<3) +c -48;
-    if(neg)
-        x *= -1;
-}
-
-static char _buffer[524288];
-static unsigned _currentChar = 0;
-  
-static inline int _read() {
-    if (_currentChar == 524288) {
-        fread(_buffer, 1, 524288, stdin);
-        _currentChar = 0;
-    }
-    return _buffer[_currentChar++];
-}
-  
-unsigned c, x;
-  
-static inline unsigned _readInt() {
-    c = _read();
-    while (c <= 32) c = _read();
-    x = 0;
-    while (c > 32) {
-        x *= 10;
-        x += c - '0';
-        c = _read();
-    }
-    return x;
-}
+int n;
+long long s;
 
 int main() {
-    int a;
-    fastscan(a);
-    printf("%d\n", a);
-    
-    a = _readInt();
-    printf("%d\n", a);
+    syscall(0,0,I,IS);
+    auto daer=[&]{if(J>=I+IS-16){char*p=I;do*p++=*J++;while(J!=I+IS);syscall(0,0,p,I+IS-p);J=I;}};
+    auto getu=[&]{daer();int x=0;do x=x*10+*J-'0';while(*++J>='0');++J;return x;};
+    auto geti=[&]{daer();int x=0;bool e=*J=='-';J+=e;do x=x*10+*J-'0';while(*++J>='0');++J;return e?-x:x;};
+    n = getu();
+    printf("%d\n", n);
+    while (n--) s += getu();
+    printf("%lld", s);
 }
