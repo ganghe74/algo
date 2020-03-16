@@ -1,3 +1,4 @@
+// https://www.acmicpc.net/problem/1199
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -9,6 +10,9 @@ using namespace std;
 // Euler Path : start != end
 // two vertices have odd degree, and others has even degree.
 // start vertex must indegree == outdegree - 1
+
+// If it is not guaranteed that eulerian path or circuit exists,
+// you need to valid input by checking degrees, or graph is connectd.
 
 int n, a[1000][1000];
 
