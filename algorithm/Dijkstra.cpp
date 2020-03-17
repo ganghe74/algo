@@ -6,6 +6,11 @@ const int INF = 1e9;
 int V;
 vector<pair<int,int>> adj[MAX_V];
 
+// 간단하면서도 실수하기 정말 쉬운 알고리즘이다.
+// 힙에 경로를 음수로 저장할때, 힙에 넣을때, 거리 갱신할때 항상 부호 체크하고, (웬만하면 최대힙을 사용하도록 하자)
+// 변수 순서 항상 체크하고...
+// if (dist[here] < cost) continue; <- 이걸 빠뜨리면 O(V^2) 알고리즘이 되어버린다. (http://www.secmem.org/blog/2019/01/09/wrong-dijkstra/)
+
 // O(ElogE)
 vector<int> dijkstra(int src) {
     vector<int> dist(V, INF);
