@@ -1,6 +1,3 @@
-// https://www.acmicpc.net/problem/11657
-// 오버플로우 조심, 시작점과 연결되지 않은 Component에서의 음수 사이클로 인한 거리갱신 조심
-// https://github.com/ganghe74/algorithm-training/issues/12
 #include <bits/stdc++.h>
 using namespace std;
 const int INF = 1e9;
