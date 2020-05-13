@@ -12,14 +12,14 @@ int main() {
         cin >> s;
 
         unordered_map<lint, unordered_map<lint, bool>> m;
-        int r = 10000, c = 10000;
+        lint r = 200000, c = 200000;
         for (char x : s) {
-            lint u = 1LL * r * 20000 + c;
+            lint u = r * 200000 + c;
             if (x == 'N') r += 1;
             else if (x == 'S') r -= 1;
             else if (x == 'W') c -= 1;
             else if (x == 'E') c += 1;
-            lint v = 1LL * r * 20000 + c;
+            lint v = r * 200000 + c;
             if (u > v) swap(u, v);
             if (m[u][v]) ans++;
             else {
