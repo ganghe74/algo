@@ -1,55 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
-using lint = long long;
-int N, K;
-vector<string> a;
-bool c[15];
-lint ans;
+const int mod = 1e6+3;
 
-bool cmp(string a, string b) {
-    for (int i=0;i<a.size();++i) {
-        if (a[i] != '?' && b[i] != '?' && a[i] != b[i]) return false;
-    }
-    return true;
-}
-
-void choice(int idx, int todo) {
-    if (!todo) {
-        vector<string> strs;
-        for (int i=0;i<N;++i)
-            if (c[i]) strs.push_back(a[i]);
-        for (int i=0;i<N;++i) {
-            for (int j=0;j<i;++j) {
-                if ((c[i] ^ c[j]) && cmp(a[i], a[j])) return;
-            }
-        }
-        lint cnt = 1;
-        for (int i=0;i<strs[0].size();++i) {
-            bool q = true;
-            for (int j=0;j<K;++j) {
-                if (strs[j][i] != '?') {
-                    q = false;
-                    break;
-                }
-            }
-            if (q) cnt = (cnt * 26) % 1000003;
-        }
-        ans = (ans + cnt) % 1000003;
-        return;
-    }
-    for (int i=idx;i<=N-todo;++i) {
-        if (!c[i]) {
-            c[i] = 1;
-            choice(i+1, todo-1);
-            c[i] = 0;
-        }
-    }
-}
+int n, m, k, d[50][1<<15];
+string a[15];
 
 int main() {
-    cin >> N >> K;
-    a.resize(N);
-    for (int i=0;i<N;++i) cin >> a[i];
-    choice(0, K);
+    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+    cin >> n >> k;
+    for (int i=0;i<n;++i)
+        cin >> a[i];
+    m = a[0].size();
+
+    for (int i=0;i<m;++i) {
+        for (char ch='a';ch<='z';++ch) {
+            int mask = 0;
+            for (int j=0;j<n;++j)
+                if (a[j][i] == ch || a[j][i] == '?')
+                    mask |= (1 << j);
+            if (!i)
+                d[i][mask]++;
+            else {
+                for (int j=0;j<(1<<n);++j)
+                    d[i][j&mask] = (d[i][j&mask] + d[i-1][j]) % mod;
+            }
+        }
+    }
+
+    int ans = 0;
+    for (int state=0; state<(1<<n); ++state)
+        if (__builtin_popcount(state) == k)
+            ans = (ans + d[m-1][state]) % mod;
+
     cout << ans;
 }
