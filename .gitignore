@@ -6,3 +6,4 @@ answer.txt
 ans.txt
 temp/*
 *.out
+*.tmp/
