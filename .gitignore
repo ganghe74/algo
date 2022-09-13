@@ -1,0 +1,10 @@
+main.*
+run
+input.txt
+output.txt
+answer.txt
+ans.txt
+temp/*
+*.out
+*.tmp
+*testcase/
